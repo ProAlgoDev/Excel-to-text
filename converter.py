@@ -35,8 +35,6 @@ class Covert:
                         value_in_first_column = str(chunk.iloc[0, 0])
                         try:
                             if '2023 оны' in values_in_second_column or '2023 ОНЫ' in values_in_second_column:
-                                print("11111111111111111")
-
                                 if row_num != 0 and date != '':
                                     file.write("\n")
                                 h = re.findall(patern, values_in_second_column)
@@ -51,8 +49,6 @@ class Covert:
                                     file.write(date+"\n")
                                     temp = date
                             if 'САРЫН' in values_in_second_column or 'сарын' in values_in_second_column:
-                                print("2222222222222222")
-
                                 if row_num != 0 and date != '' and temp != date:
                                     file.write("\n")
                                 h = re.findall(patern, values_in_second_column)
